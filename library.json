@@ -1,0 +1,32 @@
+{
+    "name": "LilyGoEPD47",
+    "version": "0.3.0",
+    "description": "LilyGo 4.7 inch ink screen driver library",
+    "keywords": "LilyGo EPD 47, driver, e-ink",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Xinyuan-LilyGO/LilyGo-EPD47.git"
+    },
+    "authors": [
+      {
+        "name": "LilyGO",
+        "maintainer": true
+      }
+    ],
+    "license": "LGPL-3.0",
+    "frameworks": [
+      "arduino",
+      "espidf"
+    ],
+    "platforms": "espressif32",
+    "export": {
+      "exclude": [
+      ]
+    },
+    "build": {
+      "includeDir": "src",
+      "srcDir": "src"
+    }
+  }
+
+

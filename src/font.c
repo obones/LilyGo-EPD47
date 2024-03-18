@@ -50,17 +50,6 @@ static int32_t utf8_len(const uint8_t ch);
 
 static uint32_t next_cp(uint8_t **string);
 
-static FontProperties font_properties_default();
-
-static void IRAM_ATTR draw_char(const GFXfont *font,
-                                uint8_t *buffer,
-                                int32_t *cursor_x,
-                                int32_t cursor_y,
-                                uint16_t buf_width,
-                                uint16_t buf_height,
-                                uint32_t cp,
-                                const FontProperties *props);
-
 /**
  * @brief Calculate the bounds of a character when drawn at (x, y), move the
  *        cursor (*x) forward, adjust the given bounds.
@@ -333,7 +322,7 @@ static uint32_t next_cp(uint8_t **string)
 }
 
 
-static FontProperties font_properties_default()
+FontProperties font_properties_default()
 {
     FontProperties props = {
         .fg_color = 0,
@@ -345,7 +334,7 @@ static FontProperties font_properties_default()
 }
 
 
-static void IRAM_ATTR draw_char(const GFXfont *font,
+void IRAM_ATTR draw_char(const GFXfont *font,
                                 uint8_t *buffer,
                                 int32_t *cursor_x,
                                 int32_t cursor_y,

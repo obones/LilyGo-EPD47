@@ -388,6 +388,17 @@ void get_glyph(const GFXfont *font, uint32_t code_point, GFXglyph **glyph);
 void write_string(const GFXfont *font, const char *string, int32_t *cursor_x,
                   int32_t *cursor_y, uint8_t *framebuffer);
 
+FontProperties font_properties_default();
+
+void IRAM_ATTR draw_char(const GFXfont *font,
+                                uint8_t *buffer,
+                                int32_t *cursor_x,
+                                int32_t cursor_y,
+                                uint16_t buf_width,
+                                uint16_t buf_height,
+                                uint32_t cp,
+                                const FontProperties *props);
+
 #ifdef __cplusplus
 }
 #endif
